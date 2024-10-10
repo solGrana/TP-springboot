@@ -10,11 +10,21 @@ import java.util.Queue;
 @Service
 public class QueueService {
 
-    private final Queue<ProductMessage> queue = new LinkedList<>();
+    private final Queue<ProductMessage> queue = new LinkedList<>(); //queue tipo productMessage, final porque no se puede modificar
 
     public List<ProductMessage> getMessages() {
         return List.copyOf(queue);
     }
+
+    /*
+    public List<ProductMessage> getMessages() {
+    List<ProductMessage> messages = new ArrayList<>();
+    for (ProductMessage message : queue) {
+        messages.add(message);
+    }
+    return messages;
+}
+ */
 
     public ProductMessage pushMessage(ProductMessage message) {
         message.setState("AVAILABLE");
