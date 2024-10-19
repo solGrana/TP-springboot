@@ -8,7 +8,6 @@ public class ProductMessage {
     private String state; // Estados: PENDING, IN PROGRESS, COMPLETED
     private int priority;
     private String contentType;
-    private int expiryTime;
 
     // Getters y setters
 
@@ -58,13 +57,5 @@ public class ProductMessage {
 
     public void setContentType(String contentType) {
         this.contentType = contentType;
-    }
-
-    public int getExpiryTime() {
-        return expiryTime;
-    }
-
-    public void setExpiryTime(int expiryTime) {
-        this.expiryTime = expiryTime;
     }
 }
