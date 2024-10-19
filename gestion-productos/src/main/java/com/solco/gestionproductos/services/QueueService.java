@@ -27,7 +27,7 @@ public class QueueService {
  */
 
     public ProductMessage pushMessage(ProductMessage message) {
-        message.setState("AVAILABLE");
+        message.setState("PENDING");
         queue.add(message);
         return message;
     }
@@ -35,7 +35,7 @@ public class QueueService {
     public ProductMessage popMessage() {
         ProductMessage message = queue.poll();
         if (message != null) {
-            message.setState("ACQUIRED");
+            message.setState("IN PROGRESS");
         }
         return message;
     }
