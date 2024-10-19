@@ -12,12 +12,12 @@ Este proyecto implementa operaciones sobre colas siguiendo el estandar AMQP.
 ### Rutas del API
 
 1. **Obtener Mensajes**
-   - **Método**: `GET`
+   - **Metodo**: `GET`
    - **Ruta**: `/queue`
    - **Descripción**: Obtiene todos los mensajes en la cola.
 
 2. **Agregar Mensaje a la Cola**
-   - **Método**: `POST`
+   - **Metodo**: `POST`
    - **Ruta**: `/queue/push`
    - **Descripción**: Agrega un nuevo mensaje a la cola.
    - **Estructura**:
@@ -32,7 +32,7 @@ Este proyecto implementa operaciones sobre colas siguiendo el estandar AMQP.
      ```
 
 3. **Extraer Mensaje de la Cola**
-   - **Método**: `DELETE`
+   - **Metodo**: `DELETE`
    - **Ruta**: `/queue/pop`
    - **Descripción**: Extrae el mensaje en orden FIFO y cambia el estado a "IN PROGRESS".
 
